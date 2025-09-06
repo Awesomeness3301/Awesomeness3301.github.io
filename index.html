@@ -17,6 +17,12 @@
       color: white;
     }
 
+    #errorMessage {
+      font-size: large;
+      opacity: 0;
+      color: red;
+    }
+
     #scplogo {
       width: 300px;
       height: 300px;
@@ -31,29 +37,28 @@
   </head>
   <body>
     <center>
-        <img id="scplogo" src="scplogo.png" alt="SCP logo" />
-        <h1>Site Blackstone Medical Login Page</h1>
-        <p>User:</p>
-        <input id="user" style="margin-bottom: 1px" /> <br />
-        <p>Password:</p>
-        <input id="pass" type="password" /><br />
-        <button onClick="buttonPress()" style="margin-top: 15px">Login</button>
-      </center>
+      <img id="scplogo" src="scplogo.png" alt="SCP logo" />
+      <h1>Site Blackstone Medical Login Page</h1>
+      <p>User:</p>
+      <input id="user" style="margin-bottom: 1px" /> <br />
+      <p>Password:</p>
+      <input id="pass" type="password" /> <br />
+      <button onClick="buttonPress()" style="margin-top: 15px">Login</button>
+      <br />
+      <p id="errorMessage">Incorrect Login</p>
+    </center>
     <script>
       function buttonPress() {
         if (
-          document.getElementById("user").value == "blackstonemedical" &&
-          document.getElementById("pass").value == "2025"
+          document.getElementById("user").value == "MorphineAddicts" &&
+          document.getElementById("pass").value == "MDontop"
         ) {
           location.href =
             "https://sites.google.com/view/site-blackstonemedicalrecords/home";
+        } else {
+          document.getElementById("errorMessage").style.opacity = 1;
         }
       }
     </script>
   </body>
 </html>
-
-
-
-
-
