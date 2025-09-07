@@ -74,8 +74,8 @@
     <center>
       <img id="scplogo" src="scplogo.png" alt="SCP logo" />
       <h1>Site <em>Blackstone</em> Medical Login Page</h1>
-      <input name="user" placeholder="Username:" /> <br />
-      <input name="pass" type="password" placeholder="Password:" /> <br />
+      <input id="user" placeholder="Username:" /> <br />
+      <input id="pass" type="password" placeholder="Password:" /> <br />
       <button onClick="buttonPress()">Login</button>
       <br />
       <p id="errorMessage">Incorrect Login</p>
@@ -84,8 +84,8 @@
     <script>
       function buttonPress() {
         if (
-          document.getElementsByName("user").value == "MorphineAddicts" &&
-          document.getElementByName("pass").value == "MDontop"
+          document.getElementsById("user").value == "MorphineAddicts" &&
+          document.getElementById("pass").value == "MDontop"
         ) {
           location.href =
             "https://sites.google.com/view/site-blackstonemedicalrecords/home";
@@ -96,3 +96,4 @@
     </script>
   </body>
 </html>
+
