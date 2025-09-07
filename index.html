@@ -18,7 +18,7 @@
       color: rgb(255, 255, 255);
       font-family: scpFont;
       margin-top: 25px;
-      margin-bottom: 25px;
+      margin-bottom: 50px;
       font-style: italic;
     }
 
@@ -33,14 +33,20 @@
       margin-bottom: 25px;
     }
 
+    input {
+      margin-bottom: 25px;
+    }
+
     button {
       font-family: scpFont;
+      margin: auto;
       margin-top: 25px;
       margin-bottom: 25px;
     }
 
     em {
       color: black;
+      text-shadow: 1px 1px rgb(89, 89, 89);
     }
 
     #errorMessage {
@@ -50,7 +56,7 @@
     }
 
     #scplogo {
-      width: 300px;
+      width: 320px;
       height: 300px;
       margin: auto;
       margin-bottom: 30px;
@@ -62,17 +68,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Site Blackstone Medical Login Page</title>
-    <link rel="icon" type="image/jpg" href="favicon.jpg" />
-    
+    <link rel="shortcut icon" type="image/jpg" href="favicon.jpg" />
   </head>
   <body>
     <center>
       <img id="scplogo" src="scplogo.png" alt="SCP logo" />
       <h1>Site <em>Blackstone</em> Medical Login Page</h1>
-      <p>User:</p>
-      <input id="user" />
-      <p>Password:</p>
-      <input id="pass" type="password" /> <br />
+      <input name="user" placeholder="Username:" /> <br />
+      <input name="pass" type="password" placeholder="Password:" /> <br />
       <button onClick="buttonPress()">Login</button>
       <br />
       <p id="errorMessage">Incorrect Login</p>
@@ -81,8 +84,8 @@
     <script>
       function buttonPress() {
         if (
-          document.getElementById("user").value == "MorphineAddicts" &&
-          document.getElementById("pass").value == "MDontop"
+          document.getElementsByName("user").value == "MorphineAddicts" &&
+          document.getElementByName("pass").value == "MDontop"
         ) {
           location.href =
             "https://sites.google.com/view/site-blackstonemedicalrecords/home";
@@ -93,5 +96,3 @@
     </script>
   </body>
 </html>
-
-
