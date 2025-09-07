@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
   <style>
+    @font-face {
+      font-family: scpFont;
+      src: url(fonts/scpFont.otf);
+    }
+
     body {
-      background-color: rgb(0, 0, 0);
+      display: grid;
+      place-items: center;
+      height: 100vh; /* Ensures the body takes up the full viewport height */
+      margin: 0; /* Remove default body margin */
+      background-color: rgb(46, 46, 46);
     }
 
     h1 {
-      color: white;
+      color: rgb(255, 255, 255);
+      font-family: scpFont;
+      margin-top: 25px;
+      margin-bottom: 25px;
+      font-style: italic;
     }
 
     h2 {
@@ -15,6 +28,19 @@
 
     p {
       color: white;
+      font-family: scpFont;
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+
+    button {
+      font-family: scpFont;
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+
+    em {
+      color: black;
     }
 
     #errorMessage {
@@ -26,6 +52,8 @@
     #scplogo {
       width: 300px;
       height: 300px;
+      margin: auto;
+      margin-bottom: 30px;
     }
   </style>
 
@@ -38,15 +66,16 @@
   <body>
     <center>
       <img id="scplogo" src="scplogo.png" alt="SCP logo" />
-      <h1>Site Blackstone Medical Login Page</h1>
+      <h1>Site <em>Blackstone</em> Medical Login Page</h1>
       <p>User:</p>
-      <input id="user" style="margin-bottom: 1px" /> <br />
+      <input id="user" />
       <p>Password:</p>
       <input id="pass" type="password" /> <br />
-      <button onClick="buttonPress()" style="margin-top: 15px">Login</button>
+      <button onClick="buttonPress()">Login</button>
       <br />
       <p id="errorMessage">Incorrect Login</p>
     </center>
+
     <script>
       function buttonPress() {
         if (
