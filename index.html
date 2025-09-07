@@ -82,19 +82,27 @@
     </center>
 
     <script>
+      var wrongCounter = 0;
+
       function buttonPress() {
-        if (
-          document.getElementById("user").value == "MorphineAddicts" &&
-          document.getElementById("pass").value == "MDontop"
-        ) {
+        var user = document.getElementById("user");
+        var pass = document.getElementById("pass");
+
+        if (user.value == "MorphineAddicts" && pass.value == "MDontop") {
           location.href =
             "https://sites.google.com/view/site-blackstonemedicalrecords/home";
         } else {
           document.getElementById("errorMessage").style.opacity = 1;
+          user.value = "";
+          pass.value = "";
+          wrongCounter = wrongCounter + 1;
+        }
+
+        if (wrongCounter == 3) {
+          location.href =
+            "https://awesomeness3301.github.io/accessdenied.github.io/";
         }
       }
     </script>
   </body>
 </html>
-
-
